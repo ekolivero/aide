@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/header";
+import { cn } from "@/lib/utils";
+import { Toaster } from "@/components/ui/toaster"
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cn(inter.className, "max-w-xl m-auto mt-8")}>
+        <div className="flex flex-row flex-1 align-middle justify-center"><Header /></div>
+        <Toaster />
+        {children}
+      </body>
     </html>
   );
 }
