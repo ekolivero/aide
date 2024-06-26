@@ -1,0 +1,76 @@
+/* highlight.css */
+.highlight-border {
+  border: 2px solid rgb(23, 132, 248);
+  box-shadow: 0 0 10px rgba(55, 132, 241, 0.5);
+}
+
+.tooltip, .hover-form {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+  z-index: 1000;
+  pointer-events: none;
+  transform: translate(-50%, -100%);
+  white-space: nowrap;
+}
+
+.code-display {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #282c34;
+  color: #ffffff;
+  padding: 20px;
+  font-family: monospace;
+  overflow: auto;
+  max-height: 40%;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.01);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.update-animation {
+  animation: pulse 1s infinite;
+}
+
+.hover-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hover-form input {
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid white;
+  background-color: white;
+  color: black;
+  pointer-events: auto; /* Allow interaction */
+}
+
+.hover-form button {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid white;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  pointer-events: auto; /* Allow interaction */
+}

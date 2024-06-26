@@ -4,7 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/header";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster"
-
+import HoverHighlightWrapper from "@/components/wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,7 +23,9 @@ export default function RootLayout({
       <body className={cn(inter.className, "max-w-xl m-auto mt-8")}>
         <div className="flex flex-row flex-1 align-middle justify-center"><Header /></div>
         <Toaster />
-        {children}
+        <HoverHighlightWrapper>
+          {children}
+        </HoverHighlightWrapper>
       </body>
     </html>
   );
